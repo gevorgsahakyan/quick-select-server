@@ -1,0 +1,35 @@
+{
+  "name": "nuancedclient",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "*",
+    "babel-loader": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "chai": "*",
+    "chai-jquery": "*",
+    "jquery": "*",
+    "jsdom": "*",
+    "mocha": "*",
+    "react-addons-test-utils": "*",
+    "webpack": "^*",
+    "webpack-dev-server": "^*"
+  },
+  "dependencies": {
+    "babel-preset-stage-1": "*",
+    "lodash": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-redux": "*",
+    "react-router": "*",
+    "redux": "*",
+    "redux-form": "*"
+  }
+}
