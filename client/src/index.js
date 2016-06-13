@@ -1,5 +1,5 @@
 import {
-	React, 
+	React,
 	ReactDOM,
 	Provider,
 	createStore,

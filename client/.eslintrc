@@ -1,0 +1,20 @@
+{
+	"extends": "airbnb",
+
+	"parserOptions": {
+		"ecmaFeatures": {
+		  "modules": true
+		}
+	},
+
+	"rules": {
+		"react/jsx-no-undef": 2,
+		"react/jsx-uses-react": 2,
+		"react/jsx-uses-vars": 2,
+		"react/prop-types": 0,
+		"react/prefer-stateless-function" : 0,
+		"comma-dangle": ["error", "never"]
+	},
+
+	"plugins": [ "react" ]
+}

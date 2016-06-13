@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "watch": "gulp watch"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,12 @@
     "babel-preset-react": "*",
     "chai": "*",
     "chai-jquery": "*",
+    "eslint": "^2.12.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.8.1",
+    "eslint-plugin-jsx-a11y": "^1.4.0",
+    "eslint-plugin-react": "^5.1.1",
+    "gulp-eslint": "^2.0.0",
     "jquery": "*",
     "jsdom": "*",
     "mocha": "*",
@@ -24,11 +31,14 @@
   },
   "dependencies": {
     "babel-preset-stage-1": "*",
+    "gulp": "^3.9.1",
     "lodash": "*",
+    "material-ui": "^0.15.0",
     "react": "*",
     "react-dom": "*",
     "react-redux": "*",
     "react-router": "*",
+    "react-tap-event-plugin": "^1.0.0",
     "redux": "*",
     "redux-form": "*"
   }

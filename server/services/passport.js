@@ -8,6 +8,7 @@ const LocalStrategy = require('passport-local');
 // Local strategy
 const localOptions = { usernameField: 'email' };
 
+// localLogin is about signin action, like a entering login and password and checking it
 const localLogin = new LocalStrategy(localOptions, (email, password, done) => {
 	User.findOne({ email }, (err, user) => {
 		if(err) { return done(err); }
@@ -23,6 +24,7 @@ const localLogin = new LocalStrategy(localOptions, (email, password, done) => {
 });
 
 // Setup & create jwt strategy, use in passport
+// jwtLogin is about to be signed in, to have a token to get some page content
 const jwtOptions = {
 	jwtFromRequest: ExtractJwt.fromHeader('authorization'),
 	secretOrKey: config.secret

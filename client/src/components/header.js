@@ -1,28 +1,55 @@
-import { React, Component, Link } from '../modules';
+import {
+	React,
+	Component,
+	PropTypes,
+	Link,
+	AppBar,
+	RaisedButton,
+	getMuiTheme,
+	baseTheme
+} from '../modules';
 
 class Header extends Component {
-	render() {
-		return (
-	      <div className="header clearfix">
-	        <nav>
-	          <ul className="nav nav-pills pull-right">
-				<Link className="link" to={'/'} activeClassName="active">
-	            	<li role="presentation" className="active">
-	            		Home
-	            	</li>
-	            </Link>
+  getChildContext() {
+    return { muiTheme: getMuiTheme(baseTheme) };
+  }
 
-            	<Link className="link" to={'/signup'} activeClassName="active">
-		            <li role="presentation">
-            			Signup
-		            </li>
-		        </Link>
-	          </ul>
-	        </nav>
-	        <h3 className="text-muted">Nuanced IT</h3>
-	      </div>
-		);
-	}
+  render() {
+    const styles = {
+      title: {
+        cursor: 'pointer',
+        color: 'white',
+        textDecoration: 'none'
+      },
+
+      raisedButton: {
+        marginTop: '5px',
+
+        label: {
+          color: 'white'
+        }
+      }
+    };
+
+    return (
+      <AppBar
+        title={<Link to={"/"} style={styles.title}>Quick Select</Link>}
+        showMenuIconButton={false}
+        iconElementRight={<RaisedButton
+          primary
+          label="Sign up"
+          style={styles.raisedButton}
+          labelStyle={styles.raisedButton.label}
+          linkButton
+          href="/signup"
+        />}
+      />
+    );
+  }
 }
+
+Header.childContextTypes = {
+  muiTheme: PropTypes.object.isRequired
+};
 
 export default Header;
